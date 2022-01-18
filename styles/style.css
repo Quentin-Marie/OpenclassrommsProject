@@ -1,205 +1,213 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/*  VARIABLES   */
-/*  MIXINS  */
-title {
-  display: none;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
 * {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-family: roboto;
-  font-size: x-large;
-  text-align: center;
   box-sizing: border-box;
   margin: 0;
 }
 
+body {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
 body > * {
   width: 100%;
-  padding: 100px 6% 100px 6%;
-}
-
-h2 {
-  font-size: 3em;
-  align-self: flex-start;
+  padding: 15px;
 }
 
 a {
   text-decoration: none;
 }
-a:visited {
-  color: black;
-}
 
-.center {
-  align-items: center;
-  text-align: center;
-}
-
-/*  HEADER  */
-header {
-  padding: 30px;
-}
-
-/*  BANDEAU */
-.bandeau {
+.row {
   flex-direction: row;
-  background-color: #E5E5E5;
-  height: 130px;
-  padding: 0;
-}
-.bandeau svg {
-  padding-left: 27%;
-  padding-right: 2%;
-}
-.bandeau p {
-  font-size: 1.7em;
 }
 
-/*  EXPLORER    */
+.bandeau {
+  background-color: #E5E5E5;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 3%;
+}
+.bandeau i {
+  width: 1.5em;
+  align-self: baseline;
+}
+
 .explorer {
   background-color: #f8f8f8;
-  height: 700px;
-  justify-content: space-between;
+  padding: 35px 25px 50px 25px;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .explorer h2 {
-  padding: 2% 10% 0 10%;
+  font-size: 1.8em;
+  margin: 10px;
 }
 .explorer p {
-  font-size: 2em;
+  font-size: 1.2em;
 }
 .explorer button {
-  width: 600px;
-  height: 120px;
+  height: 50px;
+  width: 250px;
   border: none;
-  border-radius: 60px;
-  font-size: 1.7em;
-  padding-top: 35px;
-  box-shadow: 0px 0px 15px #E5E5E5;
+  border-radius: 50px;
+  background-color: #9356DC;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
   color: #f8f8f8;
-  background-color: #FF79DA;
+  font-size: 1.1em;
 }
 
-/*  FONCTIONNEMENT  */
 .fonctionnement {
-  height: 1200px;
-  gap: 60px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding-bottom: 80px;
+}
+.fonctionnement h2 {
+  align-self: flex-start;
 }
 .fonctionnement div {
-  position: relative;
-  justify-content: space-evenly;
-  flex-direction: row;
-  height: 180px;
-  width: 800px;
-  padding-right: 100px;
+  width: 90%;
+  height: 70px;
+  border-radius: 20px;
   background-color: #f8f8f8;
-  border-radius: 45px;
+  justify-content: center;
+  position: relative;
   box-shadow: 0px 0px 15px #E5E5E5;
+}
+.fonctionnement div .nb {
+  position: absolute;
+  left: -13px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #9356DC;
+  align-self: center;
+  justify-content: center;
+  color: #f8f8f8;
+}
+.fonctionnement div i {
+  align-self: center;
+  position: absolute;
+  left: 12%;
+  transform: scale(1.4);
 }
 .fonctionnement div p {
-  font-size: 1.7em;
-  font-weight: bold;
-}
-.fonctionnement div .numero {
-  position: absolute;
-  left: -25px;
-  height: 55px;
-  width: 55px;
-  border-radius: 55px;
-  background-color: #9356DC;
-  color: white;
-  font-weight: normal;
+  font-weight: 550;
+  align-items: center;
 }
 
-/*  RESTAURANTS */
 .restaurants {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   background-color: #f8f8f8;
-  gap: 45px;
+  padding-top: 50px;
+  gap: 30px;
 }
-
-.card {
-  height: 650px;
-  width: 100%;
+.restaurants h2 {
+  align-self: flex-start;
+}
+.restaurants figure {
+  width: 380px;
+  height: 280px;
+  position: relative;
   background-color: white;
-  border-radius: 50px;
+  overflow: hidden;
+  border-radius: 15px;
   box-shadow: 0px 0px 15px #E5E5E5;
-  overflow: hidden;
-  position: relative;
 }
-.card * {
-  align-items: flex-start;
+.restaurants figure a {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
 }
-.card__image {
-  width: 860px;
-  height: 450px;
-  position: relative;
-  overflow: hidden;
-}
-.card__image p {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  background-color: #99E2D0;
-  font-size: 1.7em;
-  font-weight: bold;
-  width: 200px;
-  height: 80px;
-  border-radius: 5px;
-  padding: 15px;
-  color: #32b091;
-}
-.card__image img {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.card__corps {
+.restaurants figure img {
+  width: 380px;
   height: 200px;
-  justify-content: space-between;
-  padding: 40px;
+  object-fit: cover;
+  overflow: hidden;
 }
-.card h3 {
-  font-size: 1.8em;
-}
-.card p {
-  font-size: 1.6em;
-}
-.card svg {
+.restaurants figure .new {
   position: absolute;
-  bottom: 80px;
-  right: 60px;
+  top: 10px;
+  right: 10px;
+  width: 80px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #99E2D0;
+  align-items: center;
+  justify-content: center;
+  color: #278870;
 }
-.card svg:hover {
-  color: #FF79DA;
+.restaurants figure figcaption {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5px;
+  padding: 3%;
+  width: 100%;
+  height: 80px;
+  position: relative;
+}
+.restaurants figure figcaption i {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  transform: scale(1.5);
 }
 
-/*  FOOTER  */
+header {
+  padding: 15px;
+  justify-content: center;
+}
+
 footer {
-  height: 450px;
-  background-color: #404040;
-  color: white;
+  background-color: #424242;
+  width: 100%;
+  height: 200px;
+  padding: 30px 0 0 30px;
+  flex-direction: column;
   align-items: flex-start;
-  padding: 50px;
+  justify-content: center;
+  text-align: center;
 }
 footer ul {
+  flex-direction: column;
   align-items: flex-start;
-}
-footer ul svg {
-  padding-right: 25px;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
 }
 footer ul li {
-  padding: 15px 0px 10px 0px;
-  flex-direction: row;
-  font-size: 1.5em;
+  padding-bottom: 10px;
 }
 footer ul a {
-  text-decoration: none;
-  font-size: 1em;
-  color: white;
+  color: #f8f8f8;
+}
+footer ul a i {
+  padding-right: 10px;
+  width: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

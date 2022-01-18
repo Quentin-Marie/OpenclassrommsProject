@@ -1,0 +1,22 @@
+* {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    @include column;
+    margin: 0;
+    > * {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    flex-direction: row;
+}
