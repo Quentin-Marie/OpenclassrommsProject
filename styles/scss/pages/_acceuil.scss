@@ -1,3 +1,25 @@
+#chargement {
+    z-index: 1;
+    
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes disapear {
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
 .bandeau {
     background-color: $background-color-1;
     width: 100%;
@@ -21,17 +43,6 @@
     }
     p {
         font-size: 1.2em;
-    }
-    button {
-        height: 50px;
-        width: 250px;
-        border: none;
-        border-radius: 50px;
-        background-color: $color-primary;
-        margin: 5px;
-        @include text-center;      
-        color: $background-color-2;
-        font-size: 1.1em;
     }
 }
 
@@ -82,6 +93,9 @@
     gap: 30px;
     h2 {
     align-self: flex-start;
+    @include tablette {
+        color: red;
+    }
     }
     figure {
         width: 380px;

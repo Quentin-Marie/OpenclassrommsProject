@@ -3,10 +3,20 @@
     box-sizing: border-box;
     margin: 0
 }
+title {
+    display: none;
+}
 
 body {
+    width: 100%;
+}
+
+.corps {
     @include column;
     margin: 0;
+    width: 100%;
+    opacity: 0;
+    background-color: white;
     > * {
         width: 100%;
         padding: 15px;
@@ -15,8 +25,4 @@ body {
 
 a {
     text-decoration: none;
-}
-
-.row {
-    flex-direction: row;
 }

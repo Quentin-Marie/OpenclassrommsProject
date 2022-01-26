@@ -1,8 +1,13 @@
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
-$background-color-1: #E5E5E5;
-$background-color-2: #f8f8f8;
+$background-color-1: rgb(245, 245, 245);
+$background-color-2: rgb(251, 251, 251);
 $background-color-3: #404040;
+$color-shadow: hsl(0, 0%, 78%);
 $radius-card: 15px;
 $center: center;
+
+/*  MAPS    */
+
+$breakpoints: (phone:768, tablette:992);

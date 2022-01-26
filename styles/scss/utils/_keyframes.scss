@@ -1,0 +1,31 @@
+@keyframes chargement {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes corps {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+.corps {
+    animation: corps 2s 2s forwards;
+}
+
+#animation {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    @include wh (10%, 3%);
+    background: linear-gradient($color-tertiary, $color-secondary);
+    animation: chargement 2s;
+    animation-iteration-count: 2;
+}
