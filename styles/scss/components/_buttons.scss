@@ -6,8 +6,4 @@
     background: linear-gradient($color-secondary, $color-primary);
     align-self: center;
     margin: 20px;
-    &:hover {
-        transform: scale(1.2);
-        transition-duration: 400ms;
-    }
 }

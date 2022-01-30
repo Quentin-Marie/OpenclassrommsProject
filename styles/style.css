@@ -1,4 +1,6 @@
 /*  MAPS    */
+/*  MEDIA QUERIES  */
+/*  KEYFRAMES   */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @keyframes chargement {
@@ -9,7 +11,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes corps {
+@keyframes appear {
   0% {
     opacity: 0;
   }
@@ -17,19 +19,148 @@
     opacity: 1;
   }
 }
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+/*  ANIMATIONS  */
 .corps {
-  animation: corps 2s 2s forwards;
+  animation-name: appear;
+  animation-delay: 2s;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.btn {
+  transition: transform 400ms;
+}
+.btn:hover {
+  transform: scale(1.2);
 }
 
 #animation {
   position: absolute;
-  left: 45%;
-  top: 45%;
-  width: 10%;
-  height: 3%;
-  background: linear-gradient(#99E2D0, #FF79DA);
-  animation: chargement 2s;
-  animation-iteration-count: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(217deg, #9356DC, #FF79DA);
+}
+#animation #loader {
+  width: 150px;
+  height: 20px;
+  border-radius: 5px;
+  background: white;
+  animation: chargement 1s 0.5s;
+  animation-iteration-count: 3;
+}
+
+.menu__section .he {
+  opacity: 0;
+  animation: appear 1s 4s forwards;
+  animation: slide 1s 4s forwards;
+}
+.menu__section .a01 {
+  opacity: 0;
+  animation: appear 400ms 4.4s forwards;
+  animation: slide 400ms 4.4s forwards;
+}
+.menu__section .a02 {
+  opacity: 0;
+  animation: appear 400ms 4.5s forwards;
+  animation: slide 400ms 4.5s forwards;
+}
+.menu__section .a03 {
+  opacity: 0;
+  animation: appear 400ms 4.6s forwards;
+  animation: slide 400ms 4.6s forwards;
+}
+.menu__section .a04 {
+  opacity: 0;
+  animation: appear 400ms 4.7s forwards;
+  animation: slide 400ms 4.7s forwards;
+}
+.menu__section .hp {
+  opacity: 0;
+  animation: appear 1s 5s forwards;
+  animation: slide 1s 5s forwards;
+}
+.menu__section .a11 {
+  opacity: 0;
+  animation: appear 400ms 5.4s forwards;
+  animation: slide 400ms 5.4s forwards;
+}
+.menu__section .a12 {
+  opacity: 0;
+  animation: appear 400ms 5.5s forwards;
+  animation: slide 400ms 5.5s forwards;
+}
+.menu__section .a13 {
+  opacity: 0;
+  animation: appear 400ms 5.6s forwards;
+  animation: slide 400ms 5.6s forwards;
+}
+.menu__section .a14 {
+  opacity: 0;
+  animation: appear 400ms 5.7s forwards;
+  animation: slide 400ms 5.7s forwards;
+}
+.menu__section .hd {
+  opacity: 0;
+  animation: appear 1s 6s forwards;
+  animation: slide 1s 6s forwards;
+}
+.menu__section .a21 {
+  opacity: 0;
+  animation: appear 400ms 6.4s forwards;
+  animation: slide 400ms 6.4s forwards;
+}
+.menu__section .a22 {
+  opacity: 0;
+  animation: appear 400ms 6.5s forwards;
+  animation: slide 400ms 6.5s forwards;
+}
+.menu__section .a23 {
+  opacity: 0;
+  animation: appear 400ms 6.5s forwards;
+  animation: slide 400ms 6.5s forwards;
+}
+.menu__section .a24 {
+  opacity: 0;
+  animation: appear 400ms 6.7s forwards;
+  animation: slide 400ms 6.7s forwards;
+}
+
+.fa-heart {
+  transition: all 400ms;
+}
+.fa-heart:hover {
+  transform: scale(1.7);
+  color: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356DC, #FF79DA);
 }
 
 * {
@@ -88,24 +219,6 @@ a {
   text-decoration: none;
 }
 
-#chargement {
-  z-index: 1;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes disapear {
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
 .bandeau {
   background-color: whitesmoke;
   width: 100%;
@@ -192,12 +305,10 @@ a {
 .restaurants h2 {
   align-self: flex-start;
 }
-@media (min-width: 768) and (max-width: 992) {
-  .restaurants h2 {
-    color: red;
-  }
+.restaurants a {
+  color: black;
 }
-.restaurants figure {
+.restaurants a figure {
   width: 380px;
   height: 280px;
   position: relative;
@@ -205,21 +316,18 @@ a {
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0px 0px 15px #c7c7c7;
-}
-.restaurants figure a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: black;
 }
-.restaurants figure img {
+.restaurants a img {
   width: 380px;
   height: 200px;
   object-fit: cover;
   overflow: hidden;
 }
-.restaurants figure .new {
+.restaurants a .new {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -232,7 +340,7 @@ a {
   text-align: center;
   color: #278870;
 }
-.restaurants figure figcaption {
+.restaurants a figcaption {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -242,7 +350,7 @@ a {
   height: 80px;
   position: relative;
 }
-.restaurants figure figcaption i {
+.restaurants a figcaption i {
   position: absolute;
   right: 30px;
   top: 30px;
@@ -327,10 +435,6 @@ hr {
   background: linear-gradient(#FF79DA, #9356DC);
   align-self: center;
   margin: 20px;
-}
-.btn:hover {
-  transform: scale(1.2);
-  transition-duration: 400ms;
 }
 
 header {

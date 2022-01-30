@@ -28,20 +28,25 @@
     height: $h;
 }
 
-@mixin phone {
-    @media screen and (max-width: map-get($breakpoints, phone)){
-        @content;
+@mixin animenu ($positions) {
+    @each $list, $pos in $positions {
+        .#{$list}{
+            opacity: 0;
+            animation: appear map-get($pos, duration) map-get($pos, timer) forwards;
+            animation: slide map-get($pos, duration) map-get($pos, timer) forwards;
+        }
     }
 }
 
+/*  MEDIA QUERIES  */
 @mixin tablette {
-    @media (min-width: map-get($breakpoints, phone)) and (max-width: map-get($breakpoints, tablette)) {
+    @media (min-width: map-get($breakpoints, $phone)) and (max-width: map-get($breakpoints, $tablette)) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: map-get($breakpoints, tablette)) {
+    @media (min-width: map-get($breakpoints, $tablette)) {
         @content;
     }
 }

@@ -11,3 +11,31 @@ $center: center;
 /*  MAPS    */
 
 $breakpoints: (phone:768, tablette:992);
+
+$animation-duration: (dt:1s, dp: 400ms);
+
+$animation-timer: (
+    t0: 4s, t01:4.4s, t02:4.5s, t03:4.6s, t04:4.7s,
+    t1: 5s, t11:5.4s, t12:5.5s, t13:5.6s, t14:5.7s,
+    t2: 6s, t21:6.4s, t22:6.5s, t23:6.6s, t24:6.7s
+);
+
+$position: (
+    he: (duration: map-get($animation-duration, dt), timer: map-get($animation-timer, t0)),
+    a01: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t01)),
+    a02: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t02)),
+    a03: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t03)),
+    a04: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t04)),
+    hp: (duration: map-get($animation-duration, dt), timer: map-get($animation-timer, t1)),
+    a11: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t11)),
+    a12: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t12)),
+    a13: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t13)),
+    a14: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t14)),
+    hd: (duration: map-get($animation-duration, dt), timer: map-get($animation-timer, t2)),
+    a21: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t21)),
+    a22: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t22)),
+    a23: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t22)),
+    a24: (duration: map-get($animation-duration, dp), timer: map-get($animation-timer, t24)),
+    );
+
+
