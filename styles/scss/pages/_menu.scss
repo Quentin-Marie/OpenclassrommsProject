@@ -43,14 +43,51 @@ hr {
             @include wh ($h: 70px);
             @include shadow;
             background-color: $background-color-2;
-            border-radius: 17px;
+            border-radius: $radius-card;
             padding: 12px;
             position: relative;
             justify-content: space-between;
+            overflow: hidden;
+            h5, p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                transition: all 400ms;
+                padding-right: 50px;
+                }
             strong {
                 position: absolute;
                 right: 18px;
                 bottom: 15px;
+                transition: all 400ms;
+            }
+            &:hover {
+                .check {
+                    width: 50px;
+                }
+                i {
+                    animation: chargement 500ms 0s forwards;
+                }
+                strong {
+                    transform: translateX(-50px);
+                }
+            }
+            .check {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 0%;    
+                background-color: $color-tertiary;
+                overflow: hidden;
+                border-top-right-radius: $radius-card;
+                border-bottom-right-radius: $radius-card;
+                transition: all 400ms;
+                i {
+                    align-self: center;
+                    color: $background-color-2;
+                    width: 1.5em;
+                }
             }
         }
     }
