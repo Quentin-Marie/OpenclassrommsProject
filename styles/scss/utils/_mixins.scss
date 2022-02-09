@@ -1,0 +1,67 @@
+@mixin shadow {
+    box-shadow: 0px 0px 15px $color-shadow;
+}
+
+@mixin radius-card {
+    border-radius: $radius-card;
+}
+
+@mixin stick-left {
+    align-self: flex-start;
+}
+
+@mixin column ($align: center, $justify: center, $text: center) {
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+    text-align: $text;
+}
+
+@mixin text-center {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin wh ($w: 100%, $h: auto) {
+    width: $w;
+    height: $h;
+}
+
+@mixin animenu ($positions) {
+    @each $list, $pos in $positions {
+        .#{$list}{
+            opacity: 0;
+            animation: appear map-get($pos, duration) map-get($pos, timer) forwards;
+            animation: slide map-get($pos, duration) map-get($pos, timer) forwards;
+        }
+    }
+}
+
+@mixin padding-footer ($p-etc) {
+    @each $list, $pos in $p-etc {
+        .#{$list} {
+        padding-left: map-get($pos, pdg);
+        }
+    }
+}
+
+@mixin scale-up {
+    @include tablette {
+        transform: scale($scale-tab);
+    }
+    
+}
+
+/*  MEDIA QUERIES  */
+@mixin tablette {
+    @media (min-width: map-get($bp, tel)) and (max-width: map-get($bp, tab)) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: map-get($bp, tab)) {
+        @content;
+    }
+}

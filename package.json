@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch C:/Users/Admin/documents/1erprojet/styles/scss/_variables.scss:C:/Users/Admin/documents/1erprojet/styles/style.css"
+    "sass": "sass --watch C:/Users/Admin/documents/1erprojet/styles/scss/main.scss:C:/Users/Admin/documents/1erprojet/styles/style.css",
+    "prefix": "postcss C:/Users/Admin/documents/1erprojet/styles/style.css --use autoprefixer -d C:/Users/Admin/documents/1erprojet/styles/prefixed"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Quentin-Marie/OpenclassrommsProject/issues"
   },

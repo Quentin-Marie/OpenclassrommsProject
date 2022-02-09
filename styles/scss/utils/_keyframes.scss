@@ -1,0 +1,123 @@
+/*  KEYFRAMES   */
+
+@keyframes chargement {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes bump {
+    0% {
+       transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes slide {
+    0% {
+      transform: translateY(100%);
+    }
+  
+    100% {
+      opacity: 100%;
+    }
+  }
+
+
+/*  ANIMATIONS  */
+
+.corps {
+    animation-name: appear;
+    animation-delay: 0s;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    transition: transform 400ms;
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
+}
+
+#animation {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include text-center;
+    background: linear-gradient(217deg, $color-primary, $color-secondary);
+    #loader {
+        @include wh (150px, 20px);
+        border-radius: 5px;
+        background: white;
+        animation: chargement 1s 0.5s;
+        animation-iteration-count: 3;    
+    }
+}
+
+.menu__section {
+    @include animenu ($position);
+}
+
+.fa-heart {
+    transition: color 400ms;
+        &:hover {
+            cursor: pointer;
+            color: $color-secondary;
+    }
+}
+
+.fonctionnement div:hover {
+    cursor: pointer;
+    background-color: lighten($color-secondary, 22%);
+}
+
+.menu__section__plat:hover {
+    .check {
+        width: 50px;
+        @include tablette {
+            width: 100px;
+        }
+        @include desktop {
+            width: 80px;
+        }
+    }
+    i {
+        animation: chargement 500ms 0s forwards;
+    }
+    strong {
+        transform: translateX(-50px);
+        @include tablette {
+            transform: translateX(-100px);
+        }
+        @include desktop {
+            transform: translateX(-80px);
+        }
+    }
+}
