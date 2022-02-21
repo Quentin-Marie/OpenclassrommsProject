@@ -1,16 +1,17 @@
-* {
+body {
+    width: 100%;
     display: flex;
     box-sizing: border-box;
     margin: 0;
+    * {
+        display: flex;
+        box-sizing: border-box;
+        margin: 0;
+    }
 }
 title {
     display: none;
 }
-
-body {
-    width: 100%;
-}
-
 .corps {
     @include column;
     margin: 0;

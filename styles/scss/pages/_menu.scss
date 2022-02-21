@@ -80,10 +80,16 @@ hr {
             }
             h5, p {
                 overflow: hidden;
-                text-overflow: ellipsis;
                 white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 90%;
                 transition: all 400ms;
-                padding-right: 50px;
+                display: inline;
+                float: left;
+                text-align: start;
+                @include desktop {
+                    width: 85%;
+                }
                 }
             strong {
                 position: absolute;

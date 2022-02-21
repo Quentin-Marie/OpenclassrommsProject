@@ -10,16 +10,16 @@ $center: center;
 $scale-tab: 1.2;
 $padding-li: 20px;
 
-/*  MAPS    */
+/*  MAPS   */
 
 $bp: (tel: 768px, tab: 993px);
 
 $animation-duration: (dt:1s, dp: 400ms);
 
 $animation-timer: (
-    t0: 4s, t01:4.4s, t02:4.5s, t03:4.6s, t04:4.7s,
-    t1: 5s, t11:5.4s, t12:5.5s, t13:5.6s, t14:5.7s,
-    t2: 6s, t21:6.4s, t22:6.5s, t23:6.6s, t24:6.7s
+    t0: 1s, t01:1.4s, t02:1.5s, t03:1.6s, t04:1.7s,
+    t1: 2s, t11:2.4s, t12:2.5s, t13:2.6s, t14:2.7s,
+    t2: 3s, t21:3.4s, t22:3.5s, t23:3.6s, t24:3.7s
 );
 
 $position: (

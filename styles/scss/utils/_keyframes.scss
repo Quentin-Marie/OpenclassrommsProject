@@ -56,12 +56,11 @@
     animation-fill-mode: forwards;
 }
 
-.btn {
-    transition: transform 400ms;
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.2);
-    }
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+    @include shadow (darken($color-shadow, 15%));
 }
 
 #animation {
@@ -86,10 +85,9 @@
 }
 
 .fa-heart {
-    transition: color 400ms;
-        &:hover {
-            cursor: pointer;
-            color: $color-secondary;
+    transition: color 2s;
+    &:hover {
+        color: $color-primary;
     }
 }
 
@@ -118,6 +116,12 @@
         }
         @include desktop {
             transform: translateX(-80px);
+        }
+    }
+    h5, p {
+        width: 72%;
+        @include desktop {
+            width: 60%;
         }
     }
 }

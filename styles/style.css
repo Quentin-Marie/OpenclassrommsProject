@@ -1,4 +1,4 @@
-/*  MAPS    */
+/*  MAPS   */
 /*  MEDIA QUERIES  */
 /*  KEYFRAMES   */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -51,12 +51,11 @@
   animation-fill-mode: forwards;
 }
 
-.btn {
-  transition: transform 400ms;
-}
 .btn:hover {
   cursor: pointer;
   transform: scale(1.2);
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 0px 15px #a1a1a1;
 }
 
 #animation {
@@ -81,86 +80,83 @@
 
 .menu__section .he {
   opacity: 0;
-  animation: appear 1s 4s forwards;
-  animation: slide 1s 4s forwards;
+  animation: appear 1s 1s forwards;
+  animation: slide 1s 1s forwards;
 }
 .menu__section .a01 {
   opacity: 0;
-  animation: appear 400ms 4.4s forwards;
-  animation: slide 400ms 4.4s forwards;
+  animation: appear 400ms 1.4s forwards;
+  animation: slide 400ms 1.4s forwards;
 }
 .menu__section .a02 {
   opacity: 0;
-  animation: appear 400ms 4.5s forwards;
-  animation: slide 400ms 4.5s forwards;
+  animation: appear 400ms 1.5s forwards;
+  animation: slide 400ms 1.5s forwards;
 }
 .menu__section .a03 {
   opacity: 0;
-  animation: appear 400ms 4.6s forwards;
-  animation: slide 400ms 4.6s forwards;
+  animation: appear 400ms 1.6s forwards;
+  animation: slide 400ms 1.6s forwards;
 }
 .menu__section .a04 {
   opacity: 0;
-  animation: appear 400ms 4.7s forwards;
-  animation: slide 400ms 4.7s forwards;
+  animation: appear 400ms 1.7s forwards;
+  animation: slide 400ms 1.7s forwards;
 }
 .menu__section .hp {
   opacity: 0;
-  animation: appear 1s 5s forwards;
-  animation: slide 1s 5s forwards;
+  animation: appear 1s 2s forwards;
+  animation: slide 1s 2s forwards;
 }
 .menu__section .a11 {
   opacity: 0;
-  animation: appear 400ms 5.4s forwards;
-  animation: slide 400ms 5.4s forwards;
+  animation: appear 400ms 2.4s forwards;
+  animation: slide 400ms 2.4s forwards;
 }
 .menu__section .a12 {
   opacity: 0;
-  animation: appear 400ms 5.5s forwards;
-  animation: slide 400ms 5.5s forwards;
+  animation: appear 400ms 2.5s forwards;
+  animation: slide 400ms 2.5s forwards;
 }
 .menu__section .a13 {
   opacity: 0;
-  animation: appear 400ms 5.6s forwards;
-  animation: slide 400ms 5.6s forwards;
+  animation: appear 400ms 2.6s forwards;
+  animation: slide 400ms 2.6s forwards;
 }
 .menu__section .a14 {
   opacity: 0;
-  animation: appear 400ms 5.7s forwards;
-  animation: slide 400ms 5.7s forwards;
+  animation: appear 400ms 2.7s forwards;
+  animation: slide 400ms 2.7s forwards;
 }
 .menu__section .hd {
   opacity: 0;
-  animation: appear 1s 6s forwards;
-  animation: slide 1s 6s forwards;
+  animation: appear 1s 3s forwards;
+  animation: slide 1s 3s forwards;
 }
 .menu__section .a21 {
   opacity: 0;
-  animation: appear 400ms 6.4s forwards;
-  animation: slide 400ms 6.4s forwards;
+  animation: appear 400ms 3.4s forwards;
+  animation: slide 400ms 3.4s forwards;
 }
 .menu__section .a22 {
   opacity: 0;
-  animation: appear 400ms 6.5s forwards;
-  animation: slide 400ms 6.5s forwards;
+  animation: appear 400ms 3.5s forwards;
+  animation: slide 400ms 3.5s forwards;
 }
 .menu__section .a23 {
   opacity: 0;
-  animation: appear 400ms 6.5s forwards;
-  animation: slide 400ms 6.5s forwards;
+  animation: appear 400ms 3.5s forwards;
+  animation: slide 400ms 3.5s forwards;
 }
 .menu__section .a24 {
   opacity: 0;
-  animation: appear 400ms 6.7s forwards;
-  animation: slide 400ms 6.7s forwards;
+  animation: appear 400ms 3.7s forwards;
+  animation: slide 400ms 3.7s forwards;
 }
 
-.fa-heart {
-  transition: color 400ms;
-}
 .fa-heart:hover {
-  cursor: pointer;
-  color: #FF79DA;
+  font-weight: bold;
+  color: #9356DC;
 }
 
 .fonctionnement div:hover {
@@ -195,6 +191,14 @@
 @media (min-width: 993px) {
   .menu__section__plat:hover strong {
     transform: translateX(-80px);
+  }
+}
+.menu__section__plat:hover h5, .menu__section__plat:hover p {
+  width: 72%;
+}
+@media (min-width: 993px) {
+  .menu__section__plat:hover h5, .menu__section__plat:hover p {
+    width: 60%;
   }
 }
 
@@ -238,7 +242,13 @@ button {
   }
 }
 
-* {
+body {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  margin: 0;
+}
+body * {
   display: flex;
   box-sizing: border-box;
   margin: 0;
@@ -246,10 +256,6 @@ button {
 
 title {
   display: none;
-}
-
-body {
-  width: 100%;
 }
 
 .corps {
@@ -353,6 +359,11 @@ a {
   justify-content: center;
   position: relative;
   box-shadow: 0px 0px 15px #c7c7c7;
+}
+@media (min-width: 993px) {
+  .fonctionnement div {
+    width: 50%;
+  }
 }
 .fonctionnement div .nb {
   position: absolute;
@@ -466,11 +477,15 @@ a {
   height: 80px;
   position: relative;
 }
-.restaurants a figcaption i {
+.restaurants a figcaption .fa-heart {
   position: absolute;
   right: 30px;
   top: 30px;
   font-size: 1.4em;
+  color: black;
+  font-weight: lighter;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 header i {
@@ -579,10 +594,18 @@ hr {
 }
 .menu__section__plat h5, .menu__section__plat p {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 90%;
   transition: all 400ms;
-  padding-right: 50px;
+  display: inline;
+  float: left;
+  text-align: start;
+}
+@media (min-width: 993px) {
+  .menu__section__plat h5, .menu__section__plat p {
+    width: 85%;
+  }
 }
 .menu__section__plat strong {
   position: absolute;
@@ -619,11 +642,13 @@ hr {
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 0px 0px 15px #c7c7c7;
   border-radius: 25px;
   border: none;
   background: linear-gradient(#FF79DA, #9356DC);
   align-self: center;
   margin: 20px;
+  transition: all 400ms;
 }
 
 @media (min-width: 993px) {
