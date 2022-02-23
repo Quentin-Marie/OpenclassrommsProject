@@ -19,6 +19,9 @@ h5 {
     font-size: 1.2em;
 }
 h2 {
+    @include tablette {
+        font-size: 2em;
+    }
     @include desktop {
         font-size: 2em;
     }
@@ -35,4 +38,19 @@ strong {
     @include desktop {
         font-size: 1.3em;
     }
+}
+
+.explorer {
+    h2 {
+        font-size: 1.8em;
+        margin: 10px;
+    }
+    p {
+        font-size: 1.2em;
+    }
+
+}
+
+.fonctionnement p {
+    font-weight: 550;
 }

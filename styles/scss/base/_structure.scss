@@ -1,7 +1,4 @@
 body {
-    width: 100%;
-    display: flex;
-    box-sizing: border-box;
     margin: 0;
     * {
         display: flex;
@@ -9,11 +6,8 @@ body {
         margin: 0;
     }
 }
-title {
-    display: none;
-}
 .corps {
-    @include column;
+    @include position;
     margin: 0;
     width: 100%;
     opacity: 0;

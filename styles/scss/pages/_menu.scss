@@ -7,9 +7,7 @@ header i {
 
 .fond {
     padding: 0;
-    overflow: hidden;
     margin-bottom: -50px;
-    @include wh ($h: auto);
     @include tablette {
         margin-bottom: -300px;
     }
@@ -20,14 +18,13 @@ header i {
 }
 
 hr {
-    width: 50px;
-    height: 3px;
+    @include wh (50px, 3px);
     background-color: $color-tertiary;
     border: none;
 }
 
 .menu {
-    @include column ($align: flex-start);
+    flex-direction: column;
     background-color: $background-color-1;
     border-top-left-radius: 50px; 
     border-top-right-radius: 50px;
@@ -36,22 +33,20 @@ hr {
     @include desktop {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
         justify-content: space-between;
         padding: 40px 80px;
     }
     * {
-        @include column ($align: flex-start);
+        @include position ($align: flex-start);
     }
     h1 {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        @include position ($dir: row, $justify: space-between);
         align-self: center;
         width: 100%;
         padding: 18px;
     }
     &__section {
-        @include wh;
         gap: 10px;
         @include tablette {
             margin: 20px;
@@ -59,11 +54,6 @@ hr {
         }
         @include desktop {
             width: 45%;
-        }
-        .desserts {
-            @include desktop {
-                align-self: baseline;
-            }
         }
         &__plat {
             @include wh ($h: 70px);
@@ -82,11 +72,10 @@ hr {
                 overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
-                width: 90%;
+                width: 85%;
                 transition: all 400ms;
                 display: inline;
                 float: left;
-                text-align: start;
                 @include desktop {
                     width: 85%;
                 }
@@ -104,17 +93,13 @@ hr {
                 position: absolute;
                 right: 0;
                 top: 0;
-                height: 100%;
-                width: 0%;    
+                @include wh (0%, 100%);  
                 background-color: $color-tertiary;
                 overflow: hidden;
-                border-top-right-radius: $radius-card;
-                border-bottom-right-radius: $radius-card;
                 transition: all 400ms;
                 i {
                     align-self: center;
                     color: $background-color-2;
-                    width: 1.5em;
                 }
             }
         }

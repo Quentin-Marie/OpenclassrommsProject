@@ -1,4 +1,5 @@
 /*  MAPS   */
+/*  BOUCLES */
 /*  MEDIA QUERIES  */
 /*  KEYFRAMES   */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -44,10 +45,16 @@
   }
 }
 /*  ANIMATIONS  */
-.corps {
+.corps__menu {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
   animation-name: appear;
-  animation-delay: 0s;
-  animation-duration: 0s;
+  animation-fill-mode: forwards;
+}
+.corps__accueil {
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
+  animation-name: appear;
   animation-fill-mode: forwards;
 }
 
@@ -154,9 +161,24 @@
   animation: slide 400ms 3.7s forwards;
 }
 
-.fa-heart:hover {
+.fa-heart {
+  color: black;
   font-weight: bold;
+  background-size: auto 0%;
+  background-repeat: no-repeat;
+  -webkit-text-stroke-width: 3px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 400ms;
+}
+.fa-heart:hover {
   color: #9356DC;
+  background-color: #9356DC;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  -webkit-text-stroke-width: thin;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fonctionnement div:hover {
@@ -220,6 +242,11 @@ h5 {
   font-size: 1.2em;
 }
 
+@media (min-width: 768px) and (max-width: 993px) {
+  h2 {
+    font-size: 2em;
+  }
+}
 @media (min-width: 993px) {
   h2 {
     font-size: 2em;
@@ -242,10 +269,19 @@ button {
   }
 }
 
+.explorer h2 {
+  font-size: 1.8em;
+  margin: 10px;
+}
+.explorer p {
+  font-size: 1.2em;
+}
+
+.fonctionnement p {
+  font-weight: 550;
+}
+
 body {
-  width: 100%;
-  display: flex;
-  box-sizing: border-box;
   margin: 0;
 }
 body * {
@@ -254,15 +290,10 @@ body * {
   margin: 0;
 }
 
-title {
-  display: none;
-}
-
 .corps {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   margin: 0;
   width: 100%;
   opacity: 0;
@@ -279,11 +310,8 @@ a {
 
 .bandeau {
   background-color: whitesmoke;
-  width: 100%;
   height: 50px;
-  align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 3%;
 }
 @media (min-width: 768px) and (max-width: 993px) {
@@ -294,9 +322,15 @@ a {
 }
 .bandeau i {
   width: 1.5em;
+  margin-left: 15px;
   align-self: baseline;
 }
 @media (min-width: 768px) and (max-width: 993px) {
+  .bandeau i {
+    transform: scale(1.2);
+  }
+}
+@media (min-width: 993px) {
   .bandeau i {
     transform: scale(1.2);
   }
@@ -311,24 +345,11 @@ a {
   justify-content: center;
   text-align: center;
 }
-.explorer h2 {
-  font-size: 1.8em;
-  margin: 10px;
-}
-@media (min-width: 768px) and (max-width: 993px) {
-  .explorer h2 {
-    transform: scale(1.2);
-  }
-}
-.explorer p {
-  font-size: 1.2em;
-}
 
 .fonctionnement {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 20px;
   padding-bottom: 80px;
 }
@@ -388,12 +409,10 @@ a {
   }
 }
 .fonctionnement div p {
-  font-weight: 550;
   align-items: center;
 }
 
 .restaurants {
-  width: 100%;
   background-color: #fbfbfb;
   padding-top: 70px;
   gap: 30px;
@@ -426,17 +445,12 @@ a {
   }
 }
 .restaurants a figure {
-  width: 380px;
-  height: 280px;
   position: relative;
   background-color: white;
   overflow: hidden;
   border-radius: 17px;
-  box-shadow: 0px 0px 15px #c7c7c7;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  box-shadow: 0px 0px 15px #c7c7c7;
 }
 @media (min-width: 768px) and (max-width: 993px) {
   .restaurants a figure {
@@ -447,7 +461,6 @@ a {
   width: 380px;
   height: 200px;
   object-fit: cover;
-  overflow: hidden;
 }
 @media (min-width: 768px) and (max-width: 993px) {
   .restaurants a img {
@@ -469,11 +482,9 @@ a {
 }
 .restaurants a figcaption {
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
   gap: 5px;
   padding: 3%;
-  width: 100%;
   height: 80px;
   position: relative;
 }
@@ -483,8 +494,6 @@ a {
   top: 30px;
   font-size: 1.4em;
   color: black;
-  font-weight: lighter;
-  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 
@@ -497,10 +506,7 @@ header i {
 
 .fond {
   padding: 0;
-  overflow: hidden;
   margin-bottom: -50px;
-  width: 100%;
-  height: auto;
 }
 @media (min-width: 768px) and (max-width: 993px) {
   .fond {
@@ -523,9 +529,6 @@ hr {
 
 .menu {
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
   background-color: whitesmoke;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -536,6 +539,7 @@ hr {
   .menu {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 40px 80px;
   }
@@ -544,19 +548,16 @@ hr {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  text-align: center;
 }
 .menu h1 {
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   align-self: center;
   width: 100%;
   padding: 18px;
 }
 .menu__section {
-  width: 100%;
-  height: auto;
   gap: 10px;
 }
 @media (min-width: 768px) and (max-width: 993px) {
@@ -568,11 +569,6 @@ hr {
 @media (min-width: 993px) {
   .menu__section {
     width: 45%;
-  }
-}
-@media (min-width: 993px) {
-  .menu__section .desserts {
-    align-self: baseline;
   }
 }
 .menu__section__plat {
@@ -596,11 +592,10 @@ hr {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 90%;
+  width: 85%;
   transition: all 400ms;
   display: inline;
   float: left;
-  text-align: start;
 }
 @media (min-width: 993px) {
   .menu__section__plat h5, .menu__section__plat p {
@@ -622,18 +617,15 @@ hr {
   position: absolute;
   right: 0;
   top: 0;
-  height: 100%;
   width: 0%;
+  height: 100%;
   background-color: #99E2D0;
   overflow: hidden;
-  border-top-right-radius: 17px;
-  border-bottom-right-radius: 17px;
   transition: all 400ms;
 }
 .menu__section__plat .check i {
   align-self: center;
   color: #fbfbfb;
-  width: 1.5em;
 }
 
 .btn {
@@ -658,12 +650,11 @@ hr {
 }
 
 header {
-  padding: 15px;
+  width: 100%;
   justify-content: center;
-  align-items: center;
 }
 @media (min-width: 993px) {
-  header {
+  header svg {
     transform: scale(1.2);
   }
 }
@@ -674,9 +665,6 @@ header {
   height: 200px;
   padding: 20px 30px;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
 }
 @media (min-width: 768px) and (max-width: 993px) {
   .footer {
@@ -690,9 +678,6 @@ header {
 }
 .footer ul {
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
   padding: 0;
 }
 @media (min-width: 768px) and (max-width: 993px) {

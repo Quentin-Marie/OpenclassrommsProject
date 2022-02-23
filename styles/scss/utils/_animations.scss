@@ -50,10 +50,18 @@
 /*  ANIMATIONS  */
 
 .corps {
-    animation-name: appear;
-    animation-delay: 0s;
-    animation-duration: 0s;
-    animation-fill-mode: forwards;
+    &__menu {
+        animation-delay: 0.5s;
+        animation-duration: 1s;
+        animation-name: appear;
+        animation-fill-mode: forwards;        
+    }
+    &__accueil {
+        animation-delay: 1.5s;
+        animation-duration: 1.5s;
+        animation-name: appear;
+        animation-fill-mode: forwards;    
+    }
 }
 
 .btn:hover {
@@ -84,10 +92,24 @@
     @include animenu ($position);
 }
 
+
 .fa-heart {
-    transition: color 2s;
+    color: black;
+    font-weight: bold;
+    background-size: auto 0%;
+    background-repeat: no-repeat;
+    -webkit-text-stroke-width: 3px;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 400ms;
     &:hover {
         color: $color-primary;
+        background-color: $color-primary;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        -webkit-text-stroke-width: thin;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;            
     }
 }
 
