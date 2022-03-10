@@ -309,7 +309,7 @@ a {
 }
 
 .bandeau {
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   height: 50px;
   justify-content: center;
   gap: 3%;
@@ -520,16 +520,9 @@ header i {
   }
 }
 
-hr {
-  width: 50px;
-  height: 3px;
-  background-color: #99E2D0;
-  border: none;
-}
-
 .menu {
   flex-direction: column;
-  background-color: whitesmoke;
+  background-color: #f5f5f5;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   gap: 20px;
@@ -559,6 +552,7 @@ hr {
 }
 .menu__section {
   gap: 10px;
+  position: relative;
 }
 @media (min-width: 768px) and (max-width: 993px) {
   .menu__section {
@@ -570,6 +564,17 @@ hr {
   .menu__section {
     width: 45%;
   }
+}
+.menu__section h4 {
+  padding-bottom: 20px;
+}
+.menu__section h4::after {
+  position: absolute;
+  content: "";
+  top: 25px;
+  width: 100%;
+  height: 3px;
+  background-color: #99E2D0;
 }
 .menu__section__plat {
   width: 100%;

@@ -40,14 +40,6 @@
     }
 }
 
-@mixin padding-footer ($p-etc) {
-    @each $list, $pos in $p-etc {
-        .#{$list} {
-        padding-left: map-get($pos, pdg);
-        }
-    }
-}
-
 /*  MEDIA QUERIES  */
 @mixin tablette {
     @media (min-width: map-get($bp, tel)) and (max-width: map-get($bp, tab)) {
