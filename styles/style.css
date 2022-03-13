@@ -572,7 +572,7 @@ header i {
   position: absolute;
   content: "";
   top: 25px;
-  width: 100%;
+  width: 35px;
   height: 3px;
   background-color: #99E2D0;
 }

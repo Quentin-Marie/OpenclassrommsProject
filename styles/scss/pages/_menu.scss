@@ -56,7 +56,7 @@ header i {
                 position: absolute;
                 content: "";
                 top: 25px;
-                @include wh ($h: 3px);
+                @include wh (35px, 3px);
                 background-color: $color-tertiary;
             }
         }
